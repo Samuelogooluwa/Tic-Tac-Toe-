@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #009688;
+    background: linear-gradient(90deg, #009688 0%, rgba(148, 187, 233, 1) 100%);
+    text-align: center;
+
+}
+
+button {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+}
+
+header {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.display {
+    text-transform: capitalize;
+    color: white;
+}
+
+.modal,
+.play,
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* play button */
+.play {
+    font-size: 1.2rem;
+    padding: 7px 1.3rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+
+.play:hover {
+    box-shadow: 1px 1px 15px white;
+}
+
+/* modal */
+.modal {
+    z-index: 10;
+    background: white;
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+.modal h2,
+header,
+.game p,
+.display,
+footer p {
+    font-family: 'Merienda', cursive;
+}
+
+.modal button {
+    text-transform: capitalize;
+    border: none;
+    padding: 10px;
+    background: #ff8f00c9;
+    border-radius: 6px;
+}
+
+.modal button:hover {
+    background: #ff8f00f7;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 7px;
+    border: 2px solid;
+    display: block;
+    margin: 15px auto;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff8f00f7;
+}
+
+/* game section */
+.game {
+    gap: 0.7rem;
+    top: 46%;
+    font-size: 4.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 6.5rem);
+    grid-template-rows: repeat(3, 6.5rem);
+    justify-content: center;
+}
+
+.game p {
+    cursor: pointer;
+    background: #ffffff4d;
+}
+
+.restart {
+    border: 1px solid black;
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    padding: 6px 10px;
+    position: absolute;
+    bottom: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #ffffff69;
+}
+
+footer p {
+    padding: 10px;
+}
+
+/* media queries */
+@media screen and (width: 280px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    .game {
+        grid-template-columns: repeat(3, 5rem);
+        grid-template-rows: repeat(3, 5rem);
+        font-size: 3.3rem;
+    }
+
+    .modal {
+        padding: 20px 10px;
+    }
+}
